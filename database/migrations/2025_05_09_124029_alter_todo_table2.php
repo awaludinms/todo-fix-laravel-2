@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         //
-        DB::statement("ALTER TABLE todos MODIFY COLUMN is_deleted INT DEFAULT 1");
+        DB::statement("ALTER TABLE todos MODIFY COLUMN is_deleted INT DEFAULT 0");
         DB::statement("UPDATE todos SET is_deleted=0");
     }
 
